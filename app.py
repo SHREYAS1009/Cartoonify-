@@ -186,13 +186,14 @@ def upload_image():
 @app.route('/display/<filename>')
 def display_image(filename):
     # print('display_image filename: ' + filename)
-    return redirect(url_for('index.html', filename='uploads/' + filename), code=301)
+    print(filename)
+    return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
 
 
-@app.route('/edit', methods=['GET'])
-def edited_image(filename):
-    return redirect(url_for('edit.html', filename='output/image_output.jpg'), code=301)
+# @app.route('/edit', methods=['GET'])
+# def edited_image(filename):
+#     return redirect(url_for('edit.html', filename='output/image_output.jpg'), code=301)
 
 
 
